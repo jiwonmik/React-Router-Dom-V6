@@ -1,6 +1,7 @@
 function Home(){
+    const users:any = [];
     return(
-        <h2>Home</h2>
+        <h2>{users[0].name}</h2>
     );
 };
 

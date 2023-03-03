@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import Home from "./screens/Home";
 import About from "./screens/About";
+import NotFound from "./screens/NotFound";
+import ErrorComponents from "./components/ErrorComponents";
 
 const router = createBrowserRouter([
   {
@@ -11,13 +13,15 @@ const router = createBrowserRouter([
     children: [
       {
         path:"",
-        element: <Home/>
+        element: <Home/>,
+        errorElement: <ErrorComponents/>
       },
       {
         path: "about",
         element: <About/>,
       }
-    ]
+    ],
+    errorElement: <NotFound/>,
   },
 ])
 
