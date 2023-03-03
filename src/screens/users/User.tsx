@@ -8,7 +8,9 @@ function User(){
             <h1>User with it {userId} is name: {users[Number(userId)-1].name}</h1>
             <hr />
             <Link to="followers">See followers</Link>
-            <Outlet />
+            <Outlet context={{
+                nameOfMyUser: users[Number(userId)-1].name,
+            }}/>
         </>
     );
 };
