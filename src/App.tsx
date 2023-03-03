@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Router from './Router';
 
 function App() {
   return (
-    <h2>Test</h2>
+    <Router/>
   );
 }
 
